@@ -21,3 +21,29 @@ const birthstones = {
   November: "Topaz or Citrine",
   December: "Tanzanite, Zircon, or Turquoise",
 };
+
+const { argv } = process;
+//Get month and save in a variable declared as 'month'
+let month = argv[2];
+//Use a switch case statement to find birthstone
+//Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#taking_advantage_of_fall-through:~:text=Taking%20advantage%20of%20fall%2Dthrough
+switch (month) {
+  case "January":
+  case "February":
+  case "March":
+  case "April":
+  case "May":
+  case "June":
+  case "July":
+  case "August":
+  case "September":
+  case "October":
+  case "November":
+  case "December":
+    console.log(`The birthstone for ${month} is ${birthstones[month]}.`);
+    break;
+
+  default:
+    console.log("Invalid month. Please enter a valid month.");
+}
