@@ -34,7 +34,7 @@ async function getBirthstone() {
   //1. The file we want to read from
   //2. The way the file is encoded
   const data = await fs.readFile("./data.json", "utf8"); //one dot(.) means current folder, two dots (..) means parent folder
-  // ../../../???
+  // ../../../ Move up three folders.
   //Just like API call, it takes time to get data from another file, so we will use await keyword. Meaning wait to get all data before we move on to the next line of code
   //we make the function as async to use the await keyword We can only use await keyword in a function that is declared as an asynchronous function
   console.log("data : ", data); //string (JSON string)
