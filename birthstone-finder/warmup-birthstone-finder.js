@@ -29,6 +29,9 @@ let month = argv[2];
 //Reference : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#taking_advantage_of_fall-through:~:text=Taking%20advantage%20of%20fall%2Dthrough
 switch (month) {
+  case undefined:
+    console.log("Please enter month");
+    break;
   case "January":
   case "February":
   case "March":
